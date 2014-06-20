@@ -8,7 +8,7 @@ access_key="3c0b4ae9-339a-420b-aa22-aaedbb518669"
 secret_key="203bd973-f83a-4b0a-8038-388a897a9a74"
  
 china = btcchina.BTCChina(access_key,secret_key)
-china.demo_method()
+#china.demo_method()
 #result = bc.get_market_depth()
 #print result
 #china.update_depth()
@@ -17,7 +17,11 @@ canada = cavirtex.Cavirtex()
 #canada.update_depth()
 #print (canada.get_depth())
 #print (china.get_depth())
-print (canada.get_converted_depth("USD"))
+#print (canada.get_converted_depth("USD"))
+#print (canada.get_ticker())
+print (china.get_converted_ticker())
+print (canada.get_converted_ticker())
+
 
 #########These methods have no arguments
 #result = bc.get_account_info()

@@ -72,6 +72,14 @@ class Market(object):
             res = {'ask': depth['asks'][0],
                    'bid': depth['bids'][0]}
         return res
+    
+    def get_converted_ticker(self, currency = "USD"):
+        depth = self.get_converted_depth(currency)
+        res = {'ask': 0, 'bid': 0}
+        if len(depth['asks']) > 0 and len(depth["bids"]) > 0:
+            res = {'ask': depth['asks'][0],
+                   'bid': depth['bids'][0]}
+        return res
 
     ## Abstract methods
     def update_depth(self):
